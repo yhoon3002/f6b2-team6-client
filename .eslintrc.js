@@ -16,5 +16,7 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
+    "no-undef": "off",
+    "n/no-callback-literal": "off",
   },
 };

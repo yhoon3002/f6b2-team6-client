@@ -1,121 +1,177 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-  width: 1920px;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  background-color: #ffffff;
+  align-items: center;
+`;
+
+export const ListBannerWrapper = styled.div`
+  width: 100%;
+  height: 210px;
+  position: relative;
+  top: -80px;
+`;
+
+export const ListBanner = styled.img`
+  width: 100%;
+  height: 290px;
+  position: absolute;
+`;
+
+export const ListBannerText = styled.div`
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  top: 65%;
+  left: 45%;
 `;
 
 export const SearchWrapper = styled.div`
   width: 100%;
-  padding: 79px 210px 30px 210px;
+  padding: 40px 340px 0 340px;
 
-  /* background-color: red; */
+  border-bottom: 1px solid #333;
+`;
 
-  border-bottom: 2px solid #c4c4c4;
+export const SearchInputIconWrapper = styled.div`
+  width: 1240px;
+  height: 70px;
+  padding-left: 30px;
+
+  font-size: 20px;
+
+  background-color: transparent;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
 `;
 
 export const SearchInputWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
+`;
+
+export const SearchIcon = styled.img`
+  width: 24px;
+
+  :hover {
+    color: #b150f2;
+  }
 `;
 
 export const SearchInput = styled.input`
-  width: 1500px;
-  height: 134px;
-
-  padding: 20px;
-
-  font-weight: 400;
+  width: 1240px;
+  height: 50px;
   font-size: 20px;
 
-  background-color: #c4c4c4;
+  border: none;
+  background-color: transparent;
 
-  margin-bottom: 83px;
+  padding-left: 20px;
+  margin-left: 20px;
+  color: #ffffff;
+
+  :focus {
+    outline: none;
+  }
 `;
 
-export const SearchTextWrapper = styled.div``;
+export const SearchTextWrapper = styled.div`
+  width: 400px;
+  display: flex;
+  align-items: flex-start;
+`;
 
 export const SearchText = styled.div`
-  width: 1500px;
-  font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 28px;
+
+  padding-right: 27px;
+  padding-bottom: 27px;
+  color: #b1b1b1;
+  :hover {
+    color: #f1f1f1;
+  }
 `;
 
 export const ProductListWrapper = styled.div`
-  width: 100%;
-  padding: 70px 210px 500px 210px;
-
-  /* display: flex; */
-  /* flex-direction: column; */
-`;
-
-export const ProductBoxWrapper = styled.div`
-  width: 100%;
+  width: 1240px;
+  padding-top: 40px;
+  padding-bottom: 300px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  /* margin-bottom: 40px; */
-
-  flex-wrap: wrap;
 `;
 
 export const ProductBox = styled.div`
-  width: 730px;
-  height: 366px;
+  width: 610px;
+  height: 270px;
 
-  /* background: yellow; */
   display: flex;
-  flex-direction: row;
 
   background-color: #c4c4c4;
-
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
 `;
 
-export const ProductImage = styled.img`
-  width: 366px;
-  height: 366px;
+export const ProductImageDiv = styled.div`
+  width: 292px;
+  height: 270px;
+  border-radius: 10px 0px 0px 10px;
+`;
 
-  /* background-image: url("/images/keyboard-01.jpg"); */
+export const ProductImage = styled.img<{ src?: string }>`
+  width: 292px;
+  height: 270px;
+
+  background-color: gray;
+  cursor: pointer;
+
   background-position: center;
   background-size: cover;
+  border-radius: 10px 0px 0px 10px;
 `;
 
 export const ProductBoxRightWrapper = styled.div`
-  width: 364px;
-  height: 366px;
+  width: 318px;
+  height: 270px;
   display: flex;
   flex-direction: column;
+  color: #fff;
+  background-color: #2c2c2c;
+  border-radius: 0px 10px 10px 0px;
 
-  padding: 90px 30px 0px 40px;
+  padding: 50px 30px 30px 40px;
 `;
 
 export const ProductTitle = styled.div`
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #f1f1f1;
 
   margin-bottom: 40px;
 `;
 
 export const ProductPrice = styled.div`
-  font-weight: 700;
-  font-size: 32px;
-
+  font-size: 28px;
+  line-height: 38px;
   margin-bottom: 24px;
 `;
 
 export const ProductContents = styled.div`
-  font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b1b1b1;
 
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+export const TextToken = styled.span<{ isMatched?: boolean }>`
+  color: ${(props) => (props.isMatched ? "#b150f2" : "#fff")};
 `;
